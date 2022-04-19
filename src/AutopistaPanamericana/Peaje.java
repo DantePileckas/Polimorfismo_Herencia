@@ -1,6 +1,7 @@
 package AutopistaPanamericana;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 public class Peaje {
 
@@ -19,7 +20,11 @@ public class Peaje {
 
 	
 	
-	//public static int dameHoraActual()
+	public static int dameHoraActual() {
+		int hora = Calendar.HOUR_OF_DAY;
+		
+		return hora;
+	}
 	
 	//public ArrayList<Cabina> cabinaConEfectivo()
 	
