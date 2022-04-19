@@ -20,9 +20,6 @@ public class Cabina {
 		
 	}
 	
-	
-	
-	
 	private boolean esHoraPico(int horaActual) {
 		boolean esHoraPico = false;
 		
@@ -33,8 +30,6 @@ public class Cabina {
 		return esHoraPico;
 		
 	}
-	
-	
 	
 	private double aplicarIncremento(double monto) {
 		return monto += monto*Peaje.INCREMENTO;
