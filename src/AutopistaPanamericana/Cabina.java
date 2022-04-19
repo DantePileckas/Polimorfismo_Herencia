@@ -8,13 +8,15 @@ public class Cabina {
 	
 	
 	
-	public void cobrar(Vehiculo vehiculo) {
+	public double cobrar(Vehiculo vehiculo) {
 		int horaActual = Peaje.dameHoraActual();
 		double monto = vehiculo.getTarifa();
 		
 		if(esHoraPico(horaActual)) {
-			//monto = aplicarIncremento(monto)
+			monto = aplicarIncremento(monto);
 		}
+		
+		return monto; //falta aplicar el descuento según medio de pago 
 		
 	}
 	
