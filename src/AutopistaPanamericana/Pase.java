@@ -7,6 +7,11 @@ public class Pase extends Electronico {
 	private final static int DIA_MIN = 5;
 
 	
+	public Pase(int cantidadDiasDemora) {
+		super(cantidadDiasDemora);
+	}
+	
+	
 	public double aplicarDescuento(double monto) {
 		int diasDemora = super.getCantidadDiasDemora();
 		
@@ -17,11 +22,7 @@ public class Pase extends Electronico {
 		}
 	
 		return monto;
-	}
-	
-	
-	//public double aplicarDescuento(double monto)
-	
+	}	
 	
 	private boolean conDemora(int dias) {
 		boolean conDemora = false ;
@@ -34,6 +35,10 @@ public class Pase extends Electronico {
 			
 	}
 	
-	
+	@Override
+	public String toString() {
+		return "Pase []";
+	}
+
 	
 }

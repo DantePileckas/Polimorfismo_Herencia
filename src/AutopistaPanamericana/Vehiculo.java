@@ -44,6 +44,12 @@ public class Vehiculo {
 		public void setCategoria(Categoria categoria) {
 			this.categoria = categoria;
 		}
+
+
+		@Override
+		public String toString() {
+			return "Vehiculo [patente=" + patente + ", tarifa=" + tarifa + ", categoria=" + categoria + "]";
+		}
 	
 		
 		

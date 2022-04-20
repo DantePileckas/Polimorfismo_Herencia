@@ -4,6 +4,10 @@ public abstract class Electronico extends MedioDePago{
 
 	private int cantidadDiasDemora;
 	
+	public Electronico(int cantidadDiasDemora) {
+		super();
+		this.cantidadDiasDemora = cantidadDiasDemora;
+	}
 
 	public int getCantidadDiasDemora() {
 		return cantidadDiasDemora;
@@ -14,6 +18,11 @@ public abstract class Electronico extends MedioDePago{
 	}
 	
 	abstract double aplicarDescuento(double monto);
+
+	@Override
+	public String toString() {
+		return "Electronico [cantidadDiasDemora=" + cantidadDiasDemora + "]";
+	}
 
 	
 	

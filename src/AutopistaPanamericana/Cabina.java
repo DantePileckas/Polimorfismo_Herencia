@@ -2,11 +2,16 @@ package AutopistaPanamericana;
 
 public class Cabina {
 
-	
+	//Attributes
 	private String id;
 	private MedioDePago medioDePago;
 	
-	
+	public Cabina(String id, MedioDePago medioDePago) {
+		super();
+		this.id = id;
+		this.medioDePago = medioDePago;
+	}
+
 	public String getId() {
 		return id;
 	}
@@ -51,6 +56,11 @@ public class Cabina {
 	
 	public boolean aceptaMedioDePagoElectronico() {
 		return getMedioDePago() instanceof Electronico;
+	}
+
+	@Override
+	public String toString() {
+		return "Cabina:" + id + ", su medioDePago es = " + medioDePago ;
 	}
 	
 }
