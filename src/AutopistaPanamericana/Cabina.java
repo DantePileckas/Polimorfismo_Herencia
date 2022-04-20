@@ -16,8 +16,7 @@ public class Cabina {
 			monto = aplicarIncremento(monto);
 		}
 		
-		return monto; //falta aplicar el descuento según medio de pago!
-		
+		return this.medioDePago.aplicarDescuento(monto);
 	}
 	
 	private boolean esHoraPico(int horaActual) {
