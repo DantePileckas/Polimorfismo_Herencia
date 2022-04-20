@@ -26,8 +26,34 @@ public class Peaje {
 		return hora;
 	}
 	
-	//public ArrayList<Cabina> cabinaConEfectivo()
+	public ArrayList<Cabina> cabinaConEfectivo(){
+		ArrayList<Cabina> cabinasResultado = new ArrayList<Cabina>();
+		MedioDePago medioDePago;
+		
+		for(Cabina c : cabinas) {
+			if(c.getMedioDePago() instanceof Efectivo) {
+				cabinasResultado.add(c);
+			}			
+		}
+		return cabinasResultado;
+	}
 	
-	//public double promedioDemora()
+	public double promedioDemora() {
+		double prom = 0;
+		int i = 0;
+		Electronico mdpe;
+		
+		for(Cabina c : cabinas) {
+			if(c.getMedioDePago() instanceof Electronico) {
+				mdpe = (Electronico) c.getMedioDePago();
+				i++;
+				prom += mdpe.getCantidadDiasDemora();
+		}
+		
+		}
+		
+		return prom/i;
+		
+	}
 	
 }

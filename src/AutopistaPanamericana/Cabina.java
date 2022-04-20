@@ -7,7 +7,22 @@ public class Cabina {
 	private MedioDePago medioDePago;
 	
 	
-	
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public MedioDePago getMedioDePago() {
+		return medioDePago;
+	}
+
+	public void setMedioDePago(MedioDePago medioDePago) {
+		this.medioDePago = medioDePago;
+	}
+
 	public double cobrar(Vehiculo vehiculo) {
 		int horaActual = Peaje.dameHoraActual();
 		double monto = vehiculo.getTarifa();
@@ -34,6 +49,8 @@ public class Cabina {
 		return monto += monto*Peaje.INCREMENTO;
 	}
 	
-	
+	public boolean aceptaMedioDePagoElectronico() {
+		return getMedioDePago() instanceof Electronico;
+	}
 	
 }
